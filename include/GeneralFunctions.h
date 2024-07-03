@@ -12,5 +12,6 @@
 void print_err_usage();
 
 int check_file(const char *file_path);
+int is_bmp_format(const char *filename);
 
 #endif //BMP_READER_GENERAL_FUNCTIONS_H

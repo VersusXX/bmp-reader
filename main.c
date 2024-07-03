@@ -1,4 +1,5 @@
 #include "GeneralFunctions.h"
+#include "BmpAnalyzer.h"
 
 int main(int argc, char *argv[]) {
 
@@ -14,8 +15,7 @@ int main(int argc, char *argv[]) {
         return file_check_result;
     }
 
-    printf("File exists and is a valid BMP file: %s\n", file_path);
-
+    print_bmp_info(file_path);
 
     return 0;
 }

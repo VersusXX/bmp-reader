@@ -4,7 +4,6 @@ void print_err_usage() {
     error("Usage: ./BMP_Reader [bmp_file_location]");
 }
 
-// Check if the file exists
 int file_exists(FILE *file) {
     if (file) {
         return 1;
@@ -22,7 +21,6 @@ int is_bmp_format(const char *filename) {
     return 1;
 }
 
-// Function to check the file
 int check_file(const char *file_path) {
     FILE *file = fopen(file_path, "rb");
     if (!file_exists(file)) {

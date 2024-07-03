@@ -3,6 +3,6 @@ project(BMP_Reader C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(BMP_Reader main.c src/GeneralFunctions.c)
+add_executable(BMP_Reader main.c src/GeneralFunctions.c src/BmpAnalyzer.c)
 
 target_include_directories(BMP_Reader PRIVATE ${PROJECT_SOURCE_DIR}/include)
