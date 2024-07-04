@@ -17,7 +17,7 @@ human-readable format. The application supports BMP versions 3, 4, and 5.
 ## Example Output
 
 ```text
-./your_test_app example.bmp
+./main example.bmp
 Width : 9
 Height : 9
 Planes : 1
@@ -57,16 +57,28 @@ sudo apt install gcc-riscv64-linux-gnu
 
 ## Building the Application
 
-### Cross-Compile for ARM or RISC-V
+### Cross-Compile for RISC-V
 
 ```shell
-riscv64-linux-gnu-gcc -static main.c -o main
+riscv64-linux-gnu-gcc -static -I./include main.c src/GeneralFunctions.c src/BmpAnalyzer.c -o main.out
+```
+
+### Cross-Compile for ARM
+
+```shell
+arm-linux-gnueabi-gcc -static -I./include main.c src/GeneralFunctions.c src/BmpAnalyzer.c -o main.out
 ```
 
 ### Run with QEMU
 
 ```shell
 qemu-riscv64 ./main example.bmp
+```
+
+Or
+
+```shell
+qemu-arm ./main example.bmp
 ```
 
 ## License
