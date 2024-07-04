@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include "GeneralFunctions.h"
 
 void print_err_usage() {
